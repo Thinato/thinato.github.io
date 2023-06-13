@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say voice="alice">Hello! Are you a car rental agency?</Say>
+    <Say language="pt-BR" voice="Polly.Camila">Olá é da locadora de veículos?</Say>
 </Response>
