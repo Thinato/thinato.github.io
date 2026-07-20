@@ -11,13 +11,12 @@ body {
   color: #ffff00;
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text y='24' font-size='24'>✨</text></svg>") 16 16, auto;
   background:
-    radial-gradient(circle at 20% 30%, #fff 1px, transparent 2px),
-    radial-gradient(circle at 70% 60%, #ff66ff 1px, transparent 2px),
-    radial-gradient(circle at 40% 80%, #00ffff 1px, transparent 2px),
-    radial-gradient(circle at 90% 20%, #ffff00 1px, transparent 2px),
-    radial-gradient(circle at 10% 70%, #fff 1px, transparent 2px),
-    linear-gradient(135deg, #1a0033 0%, #000066 50%, #330066 100%);
-  background-size: 60px 60px, 80px 80px, 100px 100px, 70px 70px, 90px 90px, 100% 100%;
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.35) 1px, transparent 2px),
+    radial-gradient(circle at 70% 60%, rgba(255,102,255,0.30) 1px, transparent 2px),
+    radial-gradient(circle at 40% 80%, rgba(0,255,255,0.28) 1px, transparent 2px),
+    linear-gradient(135deg, #05000c 0%, #000014 50%, #0a0018 100%);
+  background-color: #000;
+  background-size: 150px 150px, 190px 190px, 230px 230px, 100% 100%;
   background-attachment: fixed;
   overflow-x: hidden;
 }
