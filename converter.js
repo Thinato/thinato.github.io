@@ -54,11 +54,13 @@ function show(stage) {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// animate the progress bar from 0->100 over a rough duration
+// animate the progress bar from 0->100 over a rough duration.
+// driven by wall-clock time via setInterval (keeps advancing even if the
+// tab is backgrounded, unlike requestAnimationFrame which freezes).
 async function runBar(barEl, pctEl, noteEl, totalBytes, duration) {
   const start = Date.now();
   return new Promise(resolve => {
-    const tick = () => {
+    const id = setInterval(() => {
       const elapsed = Date.now() - start;
       let pct = Math.min(100, Math.round((elapsed / duration) * 100));
       // add a little jitter so it feels authentically janky
@@ -69,16 +71,14 @@ async function runBar(barEl, pctEl, noteEl, totalBytes, duration) {
         const done = Math.round((pct / 100) * totalBytes);
         noteEl.textContent = humanSize(done) + ' / ' + humanSize(totalBytes);
       }
-      if (elapsed < duration) {
-        requestAnimationFrame(tick);
-      } else {
+      if (elapsed >= duration) {
+        clearInterval(id);
         barEl.style.width = '100%';
         pctEl.textContent = '100%';
         if (noteEl) noteEl.textContent = humanSize(totalBytes) + ' / ' + humanSize(totalBytes);
         resolve();
       }
-    };
-    requestAnimationFrame(tick);
+    }, 60);
   });
 }
 
