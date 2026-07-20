@@ -10,6 +10,8 @@ if (counterEl) {
 
 // SPARKLE CURSOR TRAIL
 const sparkles = ['✨','⭐','🌟','★','✦','✧','💫'];
+// ANSI-only sparkle colors (bright terminal palette)
+const sparkleColors = ['#ffffff','#00ffff','#ff00ff','#ffff00','#00ff00','#ff0000','#5555ff'];
 let last = 0;
 document.addEventListener('mousemove', (e) => {
   const now = Date.now();
@@ -20,7 +22,7 @@ document.addEventListener('mousemove', (e) => {
   s.textContent = sparkles[Math.floor(Math.random()*sparkles.length)];
   s.style.left = e.clientX + 'px';
   s.style.top = e.clientY + 'px';
-  s.style.color = `hsl(${Math.random()*360}, 100%, 70%)`;
+  s.style.color = sparkleColors[Math.floor(Math.random()*sparkleColors.length)];
   document.body.appendChild(s);
   setTimeout(() => s.remove(), 800);
 });

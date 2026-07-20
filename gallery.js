@@ -35,29 +35,29 @@ function placeholder(label, bg, fg) {
 // ---- EDIT ME: your pictures live here ----
 const GALLERY = [
   {
-    src: placeholder('PHOTO 01', '#1a0033', '#ff00ff'),
+    src: placeholder('PHOTO 01', '#000000', '#ff00ff'),
     title: 'Climbing @ Caverna',
     description: 'Hanging off plastic rocks like it is 1999. This is where the example caption would go — write up to four lines about the shot and anything past that gets politely truncated with an ellipsis so the grid stays tidy.'
   },
   {
-    src: placeholder('PHOTO 02', '#000066', '#00ffff'),
+    src: placeholder('PHOTO 02', '#000000', '#00ffff'),
     title: 'Phonk Night',
     description: 'Ribcage-rattling bass and questionable lighting. Replace this placeholder by dropping a real image into images/gallery/ and pointing src at it.'
   },
   {
-    src: placeholder('PHOTO 03', '#330066', '#ffff00'),
+    src: placeholder('PHOTO 03', '#000000', '#ffff00'),
     title: 'Cafezinho o clock',
     description: 'Fuel of champions and overnight Claude Code sessions.'
   },
   {
-    src: placeholder('PHOTO 04', '#003322', '#00ff00'),
+    src: placeholder('PHOTO 04', '#000000', '#00ff00'),
     title: 'The Helix Config',
     description: 'A photo of a screen of a config I no longer understand. Four lines of glory. Line two. Line three, still going strong. Line four is the last one you will ever see before the ellipsis swoops in and cuts the rest of this rambling description off for good.'
   }
 ];
 
 // --- missing-file fallback (if a real src 404s) ---
-const BROKEN = placeholder('MISSING', '#440000', '#ff6666');
+const BROKEN = placeholder('MISSING', '#000000', '#ff0000');
 
 // ------------------------------------------------------------
 let currentIndex = 0;
