@@ -420,3 +420,42 @@ td.main {
     0 0 20px var(--ansi-bright-magenta),
     0 0 30px var(--ansi-bright-magenta);
 }
+
+/* ============================================================
+   LIGHT MODE  ::  literally just invert the whole thing :)
+   The filter goes on <html> (not <body>) — the body background
+   is propagated to the root canvas, so a filter on <body> alone
+   would leave the page background un-inverted.
+   ============================================================ */
+html.light-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+/* invert these BACK: real media stays natural, and the flash
+   overlay stays pure white (double-invert cancels out) */
+html.light-mode img,
+html.light-mode video,
+html.light-mode #flash-overlay {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* FLASHBANG white overlay */
+#flash-overlay {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2147483647;
+}
+
+/* the light/dark toggle link in the footer */
+.theme-toggle {
+  color: var(--ansi-bright-yellow);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.theme-toggle:hover {
+  color: var(--ansi-bright-red);
+  background: var(--ansi-bright-yellow);
+}
