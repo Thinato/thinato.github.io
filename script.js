@@ -1,10 +1,12 @@
-// ANIMATED VISITOR COUNTER
-let count = 1337;
-setInterval(() => {
-  count++;
-  document.getElementById('counter').textContent =
-    String(count).padStart(7, '0');
-}, 4500);
+// ANIMATED VISITOR COUNTER (only on pages that have the counter, e.g. the homepage)
+const counterEl = document.getElementById('counter');
+if (counterEl) {
+  let count = 1337;
+  setInterval(() => {
+    count++;
+    counterEl.textContent = String(count).padStart(7, '0');
+  }, 4500);
+}
 
 // SPARKLE CURSOR TRAIL
 const sparkles = ['✨','⭐','🌟','★','✦','✧','💫'];
