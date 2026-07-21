@@ -192,8 +192,8 @@ td.main {
   border-bottom: 3px double var(--ansi-bright-yellow);
   padding-bottom: 4px;
 }
-.main h2::before { content: "★ "; color: var(--ansi-bright-yellow); }
-.main h2::after  { content: " ★"; color: var(--ansi-bright-yellow); }
+.main h2::before { content: "~ "; color: var(--ansi-bright-yellow); }
+.main h2::after  { content: " ~"; color: var(--ansi-bright-yellow); }
 
 .main p {
   color: var(--ansi-bright-white);

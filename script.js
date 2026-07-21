@@ -9,7 +9,7 @@ if (counterEl) {
 }
 
 // SPARKLE CURSOR TRAIL
-const sparkles = ['✨','⭐','🌟','★','✦','✧','💫'];
+const sparkles = ['✨','⭐','🌟','*','✦','✧','💫'];
 // ANSI-only sparkle colors (bright terminal palette)
 const sparkleColors = ['#ffffff','#00ffff','#ff00ff','#ffff00','#00ff00','#ff0000','#5555ff'];
 let last = 0;

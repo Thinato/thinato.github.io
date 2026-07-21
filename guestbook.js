@@ -3,7 +3,6 @@
    Pre-seeded with "past visitors" so the book looks well-loved.
    A visitor's own signatures save to their browser (localStorage),
    so they persist across visits and blend right in with the crowd.
-   (there is no server — this is a static page — shhh)
    ============================================================ */
 (function () {
   const KEY = 'lisecki-guestbook';
@@ -12,17 +11,17 @@
   const SEED = [
     { name: 'xX_PhonkLord_Xx', site: '', date: '11/19/2003',
       msg: 'sick beats bro 🔥🔥 added ur page to my favs. sign mine back??' },
-    { name: 'tania_webmaster', site: 'geocities.com/~tania', date: '10/02/2003',
+    { name: 'tania_webmaster', site: '', date: '10/02/2003',
       msg: 'oi Paulo!! adorei seu site, super retrô 💜 vc é do webring tbm?' },
     { name: 'CyberRodrigo', site: '', date: '08/14/2003',
       msg: 'greetings from the Brazilian Dev Webring 🇧🇷 keep it real, cyber-brother' },
-    { name: 'climbergurl99', site: '', date: '06/27/2003',
-      msg: 'caverna is the BEST gym fr. see u on the wall 🧗‍♀️ beta pls' },
-    { name: 'NetscapeNavigator4Life', site: '', date: '04/03/2003',
-      msg: 'best viewed in 800x600 indeed. a person of culture. respect 🫡' },
-    { name: 'dial_up_dave', site: '', date: '02/11/2003',
-      msg: 'took 6 min to load on my 56k but WORTH IT. those gifs tho 🌟' },
-    { name: 'anon', site: '', date: '01/01/2003',
+    { name: 'climbguy808', site: '', date: '06/27/2003',
+      msg: 'caverna is the BEST gym fr. see u on the wall!! beta pls' },
+    { name: 'Tsoding_rexim', site: 'https://github.com/rexim/', date: '04/29/2003',
+      msg: 'visited your page, immediately regretted looking at the source, still here tho' },
+    { name: 'SnoopDogg', site: 'https://snopdogg.com', date: '04/20/2003',
+      msg: 'Paulo! You tryna get the Dogg faded or what?! 😂 That weed was lethal. Thanks bro, next round on me (if I remember).' },
+    { name: 'jeffyjeff', site: '', date: '01/01/2003',
       msg: 'first!!!1! happy new year everbyody 🎉' }
   ];
 
