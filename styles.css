@@ -124,7 +124,7 @@ td.sidebar {
   width: 220px;
   vertical-align: top;
   background: var(--ansi-blue);
-  border: 4px outset var(--ansi-bright-magenta);
+  border: 4px outset var(--ansi-bright-yellow);
   padding: 12px;
   color: var(--ansi-bright-white);
 }
@@ -141,7 +141,7 @@ td.main {
   font-family: 'Press Start 2P', monospace;
   font-size: 11px;
   color: var(--ansi-bright-yellow);
-  background: var(--ansi-bright-magenta);
+  background: var(--ansi-green);
   padding: 6px;
   margin: 0 -12px 10px -12px;
   text-align: center;
@@ -182,11 +182,11 @@ td.main {
 /* MAIN CONTENT */
 .main h2 {
   font-family: 'Impact', sans-serif;
-  color: var(--ansi-bright-magenta);
+  color: var(--ansi-bright-white);
   font-size: 36px;
   margin: 20px 0 10px 0;
   text-shadow:
-    2px 2px 0 var(--ansi-bright-cyan),
+    2px 2px 0 var(--ansi-bright-blue),
     4px 4px 0 var(--ansi-black);
   border-bottom: 3px double var(--ansi-bright-yellow);
   padding-bottom: 4px;
@@ -569,4 +569,50 @@ html.light-mode #flash-overlay {
 .theme-toggle:hover {
   color: var(--ansi-bright-red);
   background: var(--ansi-bright-yellow);
+}
+
+/* ============================================================
+   CALC.EXE  ::  the WebAssembly build, embedded from
+   lisecki.dev/calc/ (same origin, its own repo)
+   ============================================================ */
+.calc-window {
+  max-width: 100%;
+  margin: 14px 0;
+  border: 4px ridge var(--ansi-bright-white);
+  background: var(--ansi-black);
+  box-shadow: 8px 8px 0 var(--ansi-bright-black);
+}
+.calc-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 8px;
+  background: linear-gradient(90deg, var(--ansi-blue), var(--ansi-bright-blue));
+  border-bottom: 3px ridge var(--ansi-bright-white);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: var(--ansi-bright-white);
+}
+.calc-dots {
+  display: flex;
+  gap: 5px;
+}
+.calc-dot {
+  width: 12px;
+  height: 12px;
+  border: 2px outset var(--ansi-bright-white);
+}
+.calc-name { flex: 1 1 auto; }
+.calc-right { color: var(--ansi-bright-yellow); }
+
+/* The embedded page draws its own chrome, so only the terminal shows through. */
+.calc-frame {
+  display: block;
+  width: 100%;
+  height: 520px;
+  border: 0;
+  background: var(--ansi-black);
+}
+@media (max-width: 700px) {
+  .calc-frame { height: 380px; }
 }
