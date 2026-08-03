@@ -1,8 +1,6 @@
-/* ============================================================
    GALLERY PAGE STYLES  ::  loads on top of styles.css
    ============================================================ */
 
-/* back-home link */
 .back-home {
   display: block;
   text-align: center;
@@ -18,7 +16,6 @@
 }
 .back-home a:hover { color: var(--ansi-bright-red); background: var(--ansi-bright-yellow); }
 
-/* WRAPPER */
 .gallery-wrap {
   width: 90%;
   max-width: 1100px;
@@ -38,14 +35,12 @@
   margin: 0 0 18px 0;
 }
 
-/* GRID */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 16px;
 }
 
-/* CARD */
 .gallery-card {
   background: var(--ansi-blue);
   border: 4px outset var(--ansi-bright-magenta);
@@ -69,7 +64,6 @@
   image-rendering: auto;
 }
 
-/* CAPTION — clamped to 4 lines max */
 .gallery-caption {
   color: var(--ansi-bright-white);
   font-family: 'Comic Neue', 'Comic Sans MS', cursive;
@@ -90,7 +84,6 @@
   font-size: 15px;
 }
 
-/* empty state */
 .gallery-empty {
   text-align: center;
   color: var(--ansi-bright-cyan);
@@ -100,7 +93,6 @@
   grid-column: 1 / -1;
 }
 
-/* ============================================================
    LIGHTBOX / CAROUSEL
    ============================================================ */
 .lightbox {
@@ -131,7 +123,6 @@
   box-shadow: 0 0 30px var(--ansi-bright-magenta);
 }
 
-/* nav + close buttons — chunky 90s style */
 .lb-btn {
   font-family: 'Press Start 2P', monospace;
   font-size: 12px;
@@ -185,7 +176,6 @@
   text-shadow: 0 0 8px var(--ansi-bright-green);
 }
 
-/* mobile tweaks */
 @media (max-width: 500px) {
   .lb-prev { left: 2px; }
   .lb-next { right: 2px; }

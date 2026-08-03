@@ -1,4 +1,3 @@
-/* ============================================================
    REALLY BAD AUDIO CONVERTER  ::  loads on top of styles.css
    ============================================================ */
 
@@ -17,7 +16,6 @@
 }
 .back-home a:hover { color: var(--ansi-bright-red); background: var(--ansi-bright-yellow); }
 
-/* WRAPPER */
 .conv-wrap {
   width: 92%;
   max-width: 760px;
@@ -42,7 +40,6 @@
   margin: 0 0 18px 0;
 }
 
-/* trust badges */
 .conv-trust {
   display: flex;
   justify-content: center;
@@ -55,7 +52,6 @@
 }
 .conv-trust b { color: var(--ansi-bright-yellow); }
 
-/* DROP ZONE */
 .dropzone {
   border: 4px dashed var(--ansi-bright-yellow);
   background:
@@ -93,7 +89,6 @@
   color: var(--ansi-bright-cyan);
 }
 
-/* PROGRESS PANEL */
 .conv-stage { display: none; margin-top: 6px; }
 .conv-stage.active { display: block; }
 
@@ -107,7 +102,6 @@
 }
 .stage-label .blink { color: var(--ansi-bright-red); }
 
-/* chunky retro progress bar */
 .bar-outer {
   border: 3px inset var(--ansi-white);
   background: var(--ansi-black);
@@ -144,7 +138,6 @@
   min-height: 20px;
 }
 
-/* converting spinner */
 .spinner {
   font-size: 42px;
   display: inline-block;
@@ -160,7 +153,6 @@
   margin: 8px 0;
 }
 
-/* DONE */
 .done-box {
   border: 4px ridge var(--ansi-bright-green);
   background: rgba(0,255,0,0.05);
@@ -215,7 +207,6 @@ audio.preview {
   border-color: var(--ansi-bright-cyan);
 }
 
-/* tiny ironic disclaimer */
 .conv-disclaimer {
   font-family: 'VT323', monospace;
   font-size: 14px;

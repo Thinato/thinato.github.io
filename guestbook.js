@@ -1,4 +1,3 @@
-/* ============================================================
    GUESTBOOK  ::  totally real, 100% authentic, since 1999
    Pre-seeded with "past visitors" so the book looks well-loved.
    A visitor's own signatures save to their browser (localStorage),
@@ -7,7 +6,6 @@
 (function () {
   const KEY = 'lisecki-guestbook';
 
-  // hardcoded "past" signatures (newest of these first)
   const SEED = [
     { name: 'xX_PhonkLord_Xx', site: '', date: '11/19/2003',
       msg: 'sick beats bro 🔥🔥 added ur page to my favs. sign mine back??' },
@@ -25,14 +23,13 @@
       msg: 'first!!!1! happy new year everbyody 🎉' }
   ];
 
-  // a chunky, believable base tally so it reads as popular
   const BASE_COUNT = 1331;
 
   const $ = (id) => document.getElementById(id);
   const form     = $('gb-form');
   const entriesEl = $('gb-entries');
   const countEl  = $('gb-count');
-  if (!form || !entriesEl) return; // not on this page
+  if (!form || !entriesEl) return;
 
   function loadMine() {
     try { return JSON.parse(localStorage.getItem(KEY) || '[]'); }
@@ -48,8 +45,6 @@
     return p(d.getMonth() + 1) + '/' + p(d.getDate()) + '/' + d.getFullYear();
   }
 
-  // build one entry node with textContent (never innerHTML) so any
-  // name/message/URL a visitor types can't inject markup
   function entryNode(e, mine) {
     const wrap = document.createElement('div');
     wrap.className = 'gb-entry' + (mine ? ' gb-mine' : '');
@@ -62,7 +57,7 @@
     who.textContent = '► ' + e.name;
     if (e.site) {
       let href = e.site.trim();
-      if (!/^https?:\/\//i.test(href)) href = 'http://' + href;
+      if (!/^https?:\/\
       const a = document.createElement('a');
       a.className = 'gb-site';
       a.href = href;
@@ -96,7 +91,6 @@
 
   function render() {
     const mine = loadMine();
-    // newest first: my newest signatures, then the seeded oldies
     const all = mine.slice().reverse().map(e => ({ e, mine: true }))
       .concat(SEED.map(e => ({ e, mine: false })));
 
@@ -120,7 +114,6 @@
     form.reset();
     render();
 
-    // scroll the freshly-added (newest) entry into view + celebrate
     const first = entriesEl.querySelector('.gb-entry');
     if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });

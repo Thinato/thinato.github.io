@@ -1,4 +1,3 @@
-// ANIMATED VISITOR COUNTER (only on pages that have the counter, e.g. the homepage)
 const counterEl = document.getElementById('counter');
 if (counterEl) {
   let count = 1337;
@@ -8,9 +7,7 @@ if (counterEl) {
   }, 4500);
 }
 
-// SPARKLE CURSOR TRAIL
 const sparkles = ['✨','⭐','🌟','*','✦','✧','💫'];
-// ANSI-only sparkle colors (bright terminal palette)
 const sparkleColors = ['#ffffff','#00ffff','#ff00ff','#ffff00','#00ff00','#ff0000','#5555ff'];
 let last = 0;
 document.addEventListener('mousemove', (e) => {
@@ -27,7 +24,6 @@ document.addEventListener('mousemove', (e) => {
   setTimeout(() => s.remove(), 800);
 });
 
-// FAKE STATUS BAR MESSAGES (the kind that scrolled across the bottom in IE)
 const statuses = [
   'Loading...',
   'Welcome to my homepage!',

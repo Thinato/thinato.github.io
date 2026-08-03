@@ -1,4 +1,3 @@
-/* ============================================================
    GALLERY DATA + LOGIC
    ============================================================
 
@@ -18,7 +17,6 @@
    page works out of the box. Delete them once you add real photos.
    ============================================================ */
 
-// --- helper: builds a retro placeholder image as an SVG data URI ---
 function placeholder(label, bg, fg) {
   const svg =
     `<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'>` +
@@ -32,7 +30,6 @@ function placeholder(label, bg, fg) {
   return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
 }
 
-// ---- EDIT ME: your pictures live here ----
 const GALLERY = [
   {
     src: placeholder('PHOTO 01', '#000000', '#ff00ff'),
@@ -56,10 +53,8 @@ const GALLERY = [
   }
 ];
 
-// --- missing-file fallback (if a real src 404s) ---
 const BROKEN = placeholder('MISSING', '#000000', '#ff0000');
 
-// ------------------------------------------------------------
 let currentIndex = 0;
 const grid = document.getElementById('gallery-grid');
 const lightbox = document.getElementById('lightbox');
@@ -136,7 +131,6 @@ function escapeHtml(s) {
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-// wire up controls
 document.getElementById('lb-prev').addEventListener('click', () => step(-1));
 document.getElementById('lb-next').addEventListener('click', () => step(1));
 document.getElementById('lb-close').addEventListener('click', closeLightbox);

@@ -1,13 +1,10 @@
-/* ============================================================
    THE REALLY BAD AUDIO CONVERTER (tm)
    Converts literally any file into the exact same kalimba song,
    keeping the original filename (but as .mp3). Peak technology.
    ============================================================ */
 
-// the one (1) song this "converter" is capable of producing
 const THE_SONG = 'audio/Mr_Scruff_Kalimba_32kbps.mp3';
 
-// magical, definitely-not-fake status messages during "conversion"
 const CONVERT_MSGS = [
   'Analyzing byte-level harmonics...',
   'Locating the melody hidden inside your file...',
@@ -30,16 +27,14 @@ const stageConvert  = $('stage-convert');
 const stageDone     = $('stage-done');
 const ALL_STAGES = [stageDrop, stageUpload, stageConvert, stageDone];
 
-let objectUrl = null;   // for cleanup between runs
+let objectUrl = null;
 
-// ---- helpers ----
 function humanSize(bytes) {
   if (bytes < 1024) return bytes + ' B';
   if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
   return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
 }
 
-// strip the original extension, force .mp3
 function toMp3Name(name) {
   const dot = name.lastIndexOf('.');
   const base = (dot > 0) ? name.slice(0, dot) : name;
@@ -54,16 +49,12 @@ function show(stage) {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// animate the progress bar from 0->100 over a rough duration.
-// driven by wall-clock time via setInterval (keeps advancing even if the
-// tab is backgrounded, unlike requestAnimationFrame which freezes).
 async function runBar(barEl, pctEl, noteEl, totalBytes, duration) {
   const start = Date.now();
   return new Promise(resolve => {
     const id = setInterval(() => {
       const elapsed = Date.now() - start;
       let pct = Math.min(100, Math.round((elapsed / duration) * 100));
-      // add a little jitter so it feels authentically janky
       if (pct < 100) pct = Math.max(0, pct - Math.floor(Math.random() * 4));
       barEl.style.width = pct + '%';
       pctEl.textContent = pct + '%';
@@ -82,18 +73,15 @@ async function runBar(barEl, pctEl, noteEl, totalBytes, duration) {
   });
 }
 
-// ---- the "conversion" ----
 async function convert(file) {
   const { out, oldExt } = toMp3Name(file.name);
   const size = file.size || 1;
 
-  // PHASE 1: uploading
   show(stageUpload);
   $('up-name').textContent = file.name;
   await runBar($('up-bar'), $('up-pct'), $('up-note'), size, 1900 + Math.random() * 900);
   await sleep(350);
 
-  // PHASE 2: converting
   show(stageConvert);
   const statusEl = $('cv-status');
   const convDuration = 3200 + Math.random() * 1200;
@@ -105,14 +93,13 @@ async function convert(file) {
   clearInterval(msgTimer);
   await sleep(300);
 
-  // PHASE 3: done — prep the (very real) download
   if (objectUrl) { URL.revokeObjectURL(objectUrl); objectUrl = null; }
   try {
     const resp = await fetch(THE_SONG);
     const blob = await resp.blob();
     objectUrl = URL.createObjectURL(blob);
   } catch (e) {
-    objectUrl = THE_SONG; // fallback: direct link
+    objectUrl = THE_SONG;
   }
 
   $('done-base').textContent = out.slice(0, out.length - 4);
@@ -124,7 +111,6 @@ async function convert(file) {
   show(stageDone);
 }
 
-// ---- wiring ----
 function handleFiles(files) {
   if (files && files.length) convert(files[0]);
 }

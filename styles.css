@@ -1,15 +1,12 @@
-/* ============================================================
    PAULO'S WEBSITE  ::  EST. 1998  ::  BEST VIEWED IN IE 5
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Press+Start+2P&family=VT323&display=swap');
 
-/* ============================================================
    ANSI-16 COLOR PALETTE  ::  the ENTIRE site uses only these
    (classic terminal 16-color set — no other colors allowed)
    ============================================================ */
 :root {
-  /* normal / dim */
   --ansi-black:   #000000;
   --ansi-red:     #aa0000;
   --ansi-green:   #00aa00;
@@ -18,7 +15,6 @@
   --ansi-magenta: #aa00aa;
   --ansi-cyan:    #00aaaa;
   --ansi-white:   #aaaaaa;
-  /* bright */
   --ansi-bright-black:   #555555;
   --ansi-bright-red:     #ff0000;
   --ansi-bright-green:   #00ff00;
@@ -45,7 +41,6 @@ body {
   overflow-x: hidden;
 }
 
-/* TOP MARQUEE */
 .top-marquee {
   background: repeating-linear-gradient(
     90deg,
@@ -63,7 +58,6 @@ body {
   text-shadow: 1px 1px 0 var(--ansi-bright-white);
 }
 
-/* RAINBOW TITLE */
 .title-wrap {
   text-align: center;
   margin: 30px 0 10px 0;
@@ -111,7 +105,6 @@ h1.rainbow {
 }
 @keyframes blink { to { visibility: hidden; } }
 
-/* MAIN TABLE LAYOUT (the way God intended) */
 table.layout {
   width: 90%;
   max-width: 1000px;
@@ -136,7 +129,6 @@ td.main {
   padding: 18px;
 }
 
-/* SIDEBAR STYLES */
 .sidebar h3 {
   font-family: 'Press Start 2P', monospace;
   font-size: 11px;
@@ -179,7 +171,6 @@ td.main {
   background: var(--ansi-bright-yellow);
 }
 
-/* MAIN CONTENT */
 .main h2 {
   font-family: 'Impact', sans-serif;
   color: var(--ansi-bright-white);
@@ -205,7 +196,6 @@ td.main {
   font-weight: bold;
 }
 
-/* DIVIDERS */
 .divider {
   height: 12px;
   background: repeating-linear-gradient(
@@ -223,7 +213,6 @@ td.main {
   to { background-position: 72px 0; }
 }
 
-/* UNDER CONSTRUCTION */
 .construction {
   text-align: center;
   background: repeating-linear-gradient(
@@ -246,7 +235,6 @@ td.main {
   75% { transform: translateX(2px); }
 }
 
-/* BADGES */
 .badges {
   text-align: center;
   margin: 16px 0;
@@ -271,7 +259,6 @@ td.main {
 .badge.midi  { background: linear-gradient(180deg,var(--ansi-bright-magenta),var(--ansi-magenta)); }
 .badge.flash { background: linear-gradient(180deg,var(--ansi-bright-red),var(--ansi-red)); }
 
-/* VISITOR COUNTER */
 .counter-box {
   text-align: center;
   background: var(--ansi-black);
@@ -291,7 +278,6 @@ td.main {
   text-shadow: 0 0 8px var(--ansi-bright-green);
 }
 
-/* WEBRING */
 .webring {
   margin: 30px auto;
   max-width: 700px;
@@ -316,7 +302,6 @@ td.main {
   text-shadow: 1px 1px 0 var(--ansi-bright-yellow);
 }
 
-/* GUESTBOOK */
 .guestbook-btn {
   display: inline-block;
   font-family: 'Comic Sans MS', cursive;
@@ -336,7 +321,6 @@ td.main {
   border-style: inset;
 }
 
-/* SPINNING STAR */
 .spin {
   display: inline-block;
   animation: spin 2s linear infinite;
@@ -344,7 +328,6 @@ td.main {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* JUMP ANIMATION */
 .jump {
   display: inline-block;
   animation: jump 0.8s ease-in-out infinite;
@@ -354,7 +337,6 @@ td.main {
   50% { transform: translateY(-8px); }
 }
 
-/* FOOTER */
 .footer {
   text-align: center;
   padding: 30px 10px;
@@ -364,7 +346,6 @@ td.main {
 }
 .footer a { color: var(--ansi-bright-cyan); }
 
-/* SPARKLE TRAIL */
 .sparkle {
   position: fixed;
   pointer-events: none;
@@ -377,7 +358,6 @@ td.main {
   100% { opacity: 0; transform: translate(0,30px) scale(0.3) rotate(180deg); }
 }
 
-/* MUSIC PLAYER */
 .music-player {
   background: linear-gradient(180deg, var(--ansi-white), var(--ansi-bright-black));
   border: 3px outset var(--ansi-bright-white);
@@ -401,7 +381,6 @@ td.main {
 .music-player button:active { border-style: inset; }
 .now-playing { animation: scroll-text 8s linear infinite; }
 
-/* "SIGN MY GUESTBOOK" pulse */
 .pulse-text {
   animation: pulseSize 0.6s ease-in-out infinite alternate;
   display: inline-block;
@@ -411,7 +390,6 @@ td.main {
   to { transform: scale(1.15); }
 }
 
-/* Easter egg: cool text shadows */
 .glow {
   text-shadow:
     0 0 5px var(--ansi-bright-white),
@@ -420,10 +398,8 @@ td.main {
     0 0 30px var(--ansi-bright-magenta);
 }
 
-/* ============================================================
    GUESTBOOK
    ============================================================ */
-/* shared "back to homepage" link (used by the standalone sub-pages) */
 .back-home {
   display: block;
   text-align: center;
@@ -532,7 +508,6 @@ td.main {
   word-break: break-word;
 }
 
-/* ============================================================
    LIGHT MODE  ::  literally just invert the whole thing :)
    The filter goes on <html> (not <body>) — the body background
    is propagated to the root canvas, so a filter on <body> alone
@@ -541,7 +516,6 @@ td.main {
 html.light-mode {
   filter: invert(1) hue-rotate(180deg);
 }
-/* invert these BACK: real media stays natural, and the flash
    overlay stays pure white (double-invert cancels out) */
 html.light-mode img,
 html.light-mode video,
@@ -549,7 +523,6 @@ html.light-mode #flash-overlay {
   filter: invert(1) hue-rotate(180deg);
 }
 
-/* FLASHBANG white overlay */
 #flash-overlay {
   position: fixed;
   inset: 0;
@@ -559,7 +532,6 @@ html.light-mode #flash-overlay {
   z-index: 2147483647;
 }
 
-/* the light/dark toggle link in the footer */
 .theme-toggle {
   color: var(--ansi-bright-yellow);
   font-weight: bold;
@@ -571,7 +543,6 @@ html.light-mode #flash-overlay {
   background: var(--ansi-bright-yellow);
 }
 
-/* ============================================================
    CALC.EXE  ::  the WebAssembly build, embedded from
    lisecki.dev/calc/ (same origin, its own repo)
    ============================================================ */
@@ -605,7 +576,6 @@ html.light-mode #flash-overlay {
 .calc-name { flex: 1 1 auto; }
 .calc-right { color: var(--ansi-bright-yellow); }
 
-/* The embedded page draws its own chrome, so only the terminal shows through. */
 .calc-frame {
   display: block;
   width: 100%;
