@@ -1,8 +1,3 @@
-   LIGHT / DARK MODE TOGGLE  ::  with FLASHBANG
-   Clicking the footer link plays a flashbang, fades the screen
-   to pure white, flips the theme (color invert) behind the
-   white, then fades back out into the new theme.
-   ============================================================ */
 (function () {
   const KEY = 'lisecki-theme';
   const root = document.documentElement;

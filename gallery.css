@@ -1,184 +1,217 @@
-   GALLERY PAGE STYLES  ::  loads on top of styles.css
-   ============================================================ */
-
 .back-home {
-  display: block;
-  text-align: center;
-  margin: 10px auto 4px auto;
-  font-family: 'VT323', monospace;
-  font-size: 22px;
+    display: block;
+    text-align: center;
+    margin: 10px auto 4px auto;
+    font-family: "VT323", monospace;
+    font-size: 22px;
 }
 .back-home a {
-  color: var(--ansi-bright-green);
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: 2px 2px 0 var(--ansi-black);
+    color: var(--ansi-bright-green);
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 var(--ansi-black);
 }
-.back-home a:hover { color: var(--ansi-bright-red); background: var(--ansi-bright-yellow); }
+.back-home a:hover {
+    color: var(--ansi-bright-red);
+    background: var(--ansi-bright-yellow);
+}
 
 .gallery-wrap {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto 40px auto;
-  background: rgba(0,0,0,0.7);
-  border: 4px ridge var(--ansi-bright-cyan);
-  padding: 20px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    background: rgba(0, 0, 0, 0.7);
+    border: 4px ridge var(--ansi-bright-cyan);
+    padding: 20px;
 }
 .gallery-wrap h2 {
-  font-family: 'Impact', sans-serif;
-  color: var(--ansi-bright-magenta);
-  font-size: 32px;
-  text-align: center;
-  text-shadow: 2px 2px 0 var(--ansi-bright-cyan), 4px 4px 0 var(--ansi-black);
-  border-bottom: 3px double var(--ansi-bright-yellow);
-  padding-bottom: 6px;
-  margin: 0 0 18px 0;
+    font-family: "Impact", sans-serif;
+    color: var(--ansi-bright-magenta);
+    font-size: 32px;
+    text-align: center;
+    text-shadow:
+        2px 2px 0 var(--ansi-bright-cyan),
+        4px 4px 0 var(--ansi-black);
+    border-bottom: 3px double var(--ansi-bright-yellow);
+    padding-bottom: 6px;
+    margin: 0 0 18px 0;
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
 }
 
 .gallery-card {
-  background: var(--ansi-blue);
-  border: 4px outset var(--ansi-bright-magenta);
-  padding: 8px;
-  cursor: pointer;
-  transition: transform 0.15s ease;
-  display: flex;
-  flex-direction: column;
+    background: var(--ansi-blue);
+    border: 4px outset var(--ansi-bright-magenta);
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    display: flex;
+    flex-direction: column;
 }
 .gallery-card:hover {
-  transform: translateY(-4px) scale(1.02);
-  border-color: var(--ansi-bright-yellow);
+    transform: translateY(-4px) scale(1.02);
+    border-color: var(--ansi-bright-yellow);
 }
 .gallery-card .thumb {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-  border: 2px inset var(--ansi-bright-cyan);
-  background: var(--ansi-black);
-  image-rendering: auto;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    border: 2px inset var(--ansi-bright-cyan);
+    background: var(--ansi-black);
+    image-rendering: auto;
 }
 
 .gallery-caption {
-  color: var(--ansi-bright-white);
-  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
-  font-size: 14px;
-  line-height: 1.4;
-  margin-top: 8px;
-  text-shadow: 1px 1px 0 var(--ansi-black);
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    color: var(--ansi-bright-white);
+    font-family: "Comic Neue", "Comic Sans MS", cursive;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 8px;
+    text-shadow: 1px 1px 0 var(--ansi-black);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .gallery-caption .cap-title {
-  display: block;
-  color: var(--ansi-bright-yellow);
-  font-weight: bold;
-  font-size: 15px;
+    display: block;
+    color: var(--ansi-bright-yellow);
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .gallery-empty {
-  text-align: center;
-  color: var(--ansi-bright-cyan);
-  font-family: 'VT323', monospace;
-  font-size: 22px;
-  padding: 30px;
-  grid-column: 1 / -1;
+    text-align: center;
+    color: var(--ansi-bright-cyan);
+    font-family: "VT323", monospace;
+    font-size: 22px;
+    padding: 30px;
+    grid-column: 1 / -1;
 }
 
-   LIGHTBOX / CAROUSEL
-   ============================================================ */
 .lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  background: rgba(0,0,0,0.92);
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.92);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
-.lightbox.open { display: flex; }
+.lightbox.open {
+    display: flex;
+}
 
 .lightbox-stage {
-  position: relative;
-  max-width: 900px;
-  width: 100%;
-  text-align: center;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
 }
 .lightbox-img {
-  max-width: 100%;
-  max-height: 65vh;
-  border: 4px ridge var(--ansi-bright-yellow);
-  background: var(--ansi-black);
-  box-shadow: 0 0 30px var(--ansi-bright-magenta);
+    max-width: 100%;
+    max-height: 65vh;
+    border: 4px ridge var(--ansi-bright-yellow);
+    background: var(--ansi-black);
+    box-shadow: 0 0 30px var(--ansi-bright-magenta);
 }
 
 .lb-btn {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 12px;
-  color: var(--ansi-bright-white);
-  background: linear-gradient(180deg, var(--ansi-bright-magenta), var(--ansi-magenta));
-  border: 3px outset var(--ansi-bright-magenta);
-  padding: 12px 14px;
-  cursor: pointer;
-  text-shadow: 2px 2px 0 var(--ansi-black);
-  user-select: none;
+    font-family: "Press Start 2P", monospace;
+    font-size: 12px;
+    color: var(--ansi-bright-white);
+    background: linear-gradient(
+        180deg,
+        var(--ansi-bright-magenta),
+        var(--ansi-magenta)
+    );
+    border: 3px outset var(--ansi-bright-magenta);
+    padding: 12px 14px;
+    cursor: pointer;
+    text-shadow: 2px 2px 0 var(--ansi-black);
+    user-select: none;
 }
-.lb-btn:hover { background: linear-gradient(180deg, var(--ansi-bright-yellow), var(--ansi-yellow)); color: var(--ansi-black); }
-.lb-btn:active { border-style: inset; }
+.lb-btn:hover {
+    background: linear-gradient(
+        180deg,
+        var(--ansi-bright-yellow),
+        var(--ansi-yellow)
+    );
+    color: var(--ansi-black);
+}
+.lb-btn:active {
+    border-style: inset;
+}
 
-.lb-prev, .lb-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.lb-prev,
+.lb-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
-.lb-prev { left: 8px; }
-.lb-next { right: 8px; }
+.lb-prev {
+    left: 8px;
+}
+.lb-next {
+    right: 8px;
+}
 
 .lb-close {
-  position: absolute;
-  top: -14px;
-  right: -6px;
-  background: linear-gradient(180deg, var(--ansi-bright-red), var(--ansi-red));
-  border-color: var(--ansi-bright-red);
+    position: absolute;
+    top: -14px;
+    right: -6px;
+    background: linear-gradient(
+        180deg,
+        var(--ansi-bright-red),
+        var(--ansi-red)
+    );
+    border-color: var(--ansi-bright-red);
 }
 
 .lightbox-caption {
-  color: var(--ansi-bright-white);
-  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
-  font-size: 17px;
-  line-height: 1.5;
-  max-width: 800px;
-  margin: 16px auto 6px auto;
-  text-shadow: 1px 1px 0 var(--ansi-black);
+    color: var(--ansi-bright-white);
+    font-family: "Comic Neue", "Comic Sans MS", cursive;
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 16px auto 6px auto;
+    text-shadow: 1px 1px 0 var(--ansi-black);
 }
 .lightbox-caption .cap-title {
-  display: block;
-  color: var(--ansi-bright-yellow);
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 4px;
+    display: block;
+    color: var(--ansi-bright-yellow);
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 4px;
 }
 .lightbox-counter {
-  font-family: 'VT323', monospace;
-  font-size: 20px;
-  color: var(--ansi-bright-green);
-  text-shadow: 0 0 8px var(--ansi-bright-green);
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    color: var(--ansi-bright-green);
+    text-shadow: 0 0 8px var(--ansi-bright-green);
 }
 
 @media (max-width: 500px) {
-  .lb-prev { left: 2px; }
-  .lb-next { right: 2px; }
-  .lb-btn { font-size: 10px; padding: 10px; }
-  .lightbox-img { max-height: 55vh; }
+    .lb-prev {
+        left: 2px;
+    }
+    .lb-next {
+        right: 2px;
+    }
+    .lb-btn {
+        font-size: 10px;
+        padding: 10px;
+    }
+    .lightbox-img {
+        max-height: 55vh;
+    }
 }

@@ -1,107 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>~*~ really bad audio converter ~*~ </title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="converter.css">
-<script>if(localStorage.getItem('lisecki-theme')==='light')document.documentElement.classList.add('light-mode');</script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>~*~ really bad audio converter ~*~</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="converter.css" />
+        <script>
+            if (localStorage.getItem("lisecki-theme") === "light")
+                document.documentElement.classList.add("light-mode");
+        </script>
+    </head>
+    <body>
+        <div class="top-marquee">
+            <marquee scrollamount="8">
+                🎵 THE REALLY BAD AUDIO CONVERTER 🎵 * CONVERT *ANY* FILE INTO
+                GLORIOUS MP3 * 🔮 BRING THE MUSIC WITHIN YOUR FILES 🔮 * 100%
+                MAGIC, 0% REFUNDS * 12,847,201 FILES CONVERTED *
+            </marquee>
+        </div>
 
-<div class="top-marquee">
-  <marquee scrollamount="8">
-    🎵 THE REALLY BAD AUDIO CONVERTER 🎵 * CONVERT *ANY* FILE INTO GLORIOUS MP3 * 🔮 BRING THE MUSIC WITHIN YOUR FILES 🔮 * 100% MAGIC, 0% REFUNDS * 12,847,201 FILES CONVERTED *
-  </marquee>
-</div>
+        <div class="title-wrap">
+            <h1 class="rainbow">~ AUDIO CONVERTER ~</h1>
+            <div class="subtitle">
+                <span class="spin">*</span>
+                the last converter you will ever need
+                <span class="spin">*</span>
+            </div>
+        </div>
 
-<div class="title-wrap">
-  <h1 class="rainbow">~ AUDIO CONVERTER ~</h1>
-  <div class="subtitle">
-    <span class="spin">*</span>
-    the last converter you will ever need
-    <span class="spin">*</span>
-  </div>
-</div>
+        <div class="back-home">
+            <a href="index.html">« BACK TO HOMEPAGE</a>
+        </div>
 
-<div class="back-home">
-  <a href="index.html">« BACK TO HOMEPAGE</a>
-</div>
+        <div class="conv-wrap">
+            <p class="conv-tagline glow">
+                🔮 BRING THE MUSIC WITHIN YOUR FILES 🔮
+            </p>
+            <p class="conv-sub">
+                Upload <b>literally any file</b> — PDF, EXE, JPG, XML, your tax
+                returns, a picture of your cat — and our patented
+                <b>QuantumAudio™ AI</b> will reveal the beautiful music that was
+                hiding inside it all along.
+            </p>
 
-<div class="conv-wrap">
-  <p class="conv-tagline glow">🔮 BRING THE MUSIC WITHIN YOUR FILES 🔮</p>
-  <p class="conv-sub">
-    Upload <b>literally any file</b> — PDF, EXE, JPG, XML, your tax returns,
-    a picture of your cat — and our patented <b>QuantumAudio™ AI</b> will
-    reveal the beautiful music that was hiding inside it all along.
-  </p>
+            <div class="conv-trust">
+                <span>✔ <b>99.9%</b> accuracy</span>
+                <span>✔ <b>AI</b> powered</span>
+                <span>✔ <b>blockchain</b> ready</span>
+                <span>✔ <b>free</b> forever</span>
+            </div>
 
-  <div class="conv-trust">
-    <span>✔ <b>99.9%</b> accuracy</span>
-    <span>✔ <b>AI</b> powered</span>
-    <span>✔ <b>blockchain</b> ready</span>
-    <span>✔ <b>free</b> forever</span>
-  </div>
+            <div id="stage-drop" class="conv-stage active">
+                <div
+                    id="dropzone"
+                    class="dropzone"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Upload a file to convert"
+                >
+                    <span class="dz-icon">🎧</span>
+                    <div class="dz-big">DROP ANY FILE HERE</div>
+                    <div class="dz-small">
+                        or click to browse &nbsp;·&nbsp; max size: ∞
+                    </div>
+                </div>
+                <input id="fileInput" type="file" style="display: none" />
+            </div>
 
-  <div id="stage-drop" class="conv-stage active">
-    <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload a file to convert">
-      <span class="dz-icon">🎧</span>
-      <div class="dz-big">DROP ANY FILE HERE</div>
-      <div class="dz-small">or click to browse &nbsp;·&nbsp; max size: ∞</div>
-    </div>
-    <input id="fileInput" type="file" style="display:none">
-  </div>
+            <div id="stage-upload" class="conv-stage">
+                <div class="stage-label">
+                    📤 UPLOADING <span class="blink">▮</span><br /><span
+                        id="up-name"
+                    ></span>
+                </div>
+                <div class="bar-outer">
+                    <div id="up-bar" class="bar-inner"></div>
+                </div>
+                <div id="up-pct" class="bar-pct">0%</div>
+                <div id="up-note" class="bar-note"></div>
+            </div>
 
-  <div id="stage-upload" class="conv-stage">
-    <div class="stage-label">📤 UPLOADING <span class="blink">▮</span><br><span id="up-name"></span></div>
-    <div class="bar-outer"><div id="up-bar" class="bar-inner"></div></div>
-    <div id="up-pct" class="bar-pct">0%</div>
-    <div id="up-note" class="bar-note"></div>
-  </div>
+            <div id="stage-convert" class="conv-stage">
+                <div class="stage-label">
+                    🔮 EXTRACTING MUSIC FROM YOUR FILE 🔮
+                </div>
+                <div><span class="spinner">🎵</span></div>
+                <div id="cv-status" class="conv-status">
+                    Warming up the kalimba...
+                </div>
+                <div class="bar-outer">
+                    <div id="cv-bar" class="bar-inner"></div>
+                </div>
+                <div id="cv-pct" class="bar-pct">0%</div>
+            </div>
 
-  <div id="stage-convert" class="conv-stage">
-    <div class="stage-label">🔮 EXTRACTING MUSIC FROM YOUR FILE 🔮</div>
-    <div><span class="spinner">🎵</span></div>
-    <div id="cv-status" class="conv-status">Warming up the kalimba...</div>
-    <div class="bar-outer"><div id="cv-bar" class="bar-inner"></div></div>
-    <div id="cv-pct" class="bar-pct">0%</div>
-  </div>
+            <div id="stage-done" class="conv-stage">
+                <div class="done-box">
+                    <div class="done-title">
+                        ✨ MUSIC SUCCESSFULLY EXTRACTED!! ✨
+                    </div>
+                    <p class="conv-sub" style="margin: 0 0 8px 0">
+                        We found this banger hidden inside your file.
+                        Incredible. Science.
+                    </p>
+                    <div class="done-file">
+                        <span id="done-base">yourfile</span
+                        ><span class="ext-old" id="done-oldext"></span
+                        ><span class="ext-new">.mp3</span>
+                    </div>
+                    <audio
+                        id="preview"
+                        class="preview"
+                        controls
+                        preload="none"
+                    ></audio>
+                    <div>
+                        <a id="dl-btn" class="dl-btn" href="#"
+                            >⬇ DOWNLOAD YOUR MP3</a
+                        >
+                        <button id="again-btn" class="again-btn" type="button">
+                            🔁 CONVERT ANOTHER
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <div id="stage-done" class="conv-stage">
-    <div class="done-box">
-      <div class="done-title">✨ MUSIC SUCCESSFULLY EXTRACTED!! ✨</div>
-      <p class="conv-sub" style="margin:0 0 8px 0;">
-        We found this banger hidden inside your file. Incredible. Science.
-      </p>
-      <div class="done-file">
-        <span id="done-base">yourfile</span><span class="ext-old" id="done-oldext"></span><span class="ext-new">.mp3</span>
-      </div>
-      <audio id="preview" class="preview" controls preload="none"></audio>
-      <div>
-        <a id="dl-btn" class="dl-btn" href="#">⬇ DOWNLOAD YOUR MP3</a>
-        <button id="again-btn" class="again-btn" type="button">🔁 CONVERT ANOTHER</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="footer">
+            <p>
+                © 2003 PAULO * ALL RIGHTS RESERVED * MADE WITH NOTEPAD.EXE<br />
+                <span class="blink">♥ THANKS FOR CONVERTING ♥</span>
+            </p>
+            <p style="font-size: 14px">
+                <a href="index.html">« back to the homepage</a>
+            </p>
+            <p style="font-size: 18px; margin-top: 14px">
+                <a href="#" class="theme-toggle">💡 switch to light mode</a>
+            </p>
+        </div>
 
-<div class="footer">
-  <p>
-    © 2003 PAULO * ALL RIGHTS RESERVED * MADE WITH NOTEPAD.EXE<br>
-    <span class="blink">♥ THANKS FOR CONVERTING ♥</span>
-  </p>
-  <p style="font-size:14px;">
-    <a href="index.html">« back to the homepage</a>
-  </p>
-  <p style="font-size:18px;margin-top:14px;">
-    <a href="#" class="theme-toggle">💡 switch to light mode</a>
-  </p>
-</div>
-
-<script src="script.js" defer></script>
-<script src="converter.js" defer></script>
-<script src="theme.js" defer></script>
-
-</body>
+        <script src="script.js" defer></script>
+        <script src="converter.js" defer></script>
+        <script src="theme.js" defer></script>
+    </body>
 </html>

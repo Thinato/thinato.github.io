@@ -1,291 +1,429 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>~*~ Paulo's RADICAL Homepage ~*~ </title>
-<link rel="stylesheet" href="styles.css">
-<script>if(localStorage.getItem('lisecki-theme')==='light')document.documentElement.classList.add('light-mode');</script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>~*~ Paulo's RADICAL Homepage ~*~</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script>
+            if (localStorage.getItem("lisecki-theme") === "light")
+                document.documentElement.classList.add("light-mode");
+        </script>
+    </head>
+    <body>
+        <div class="top-marquee">
+            <marquee scrollamount="8">
+                🌟 WELCOME TO PAULO'S CYBER-CASTLE 🌟 * NOW WITH 100% MORE PHONK
+                * 🚀 LAST UPDATED: 11/22/2003 🚀 * YOU ARE VISITOR #001337 * 💾
+                PLEASE SIGN MY GUESTBOOK 💾 * BEST VIEWED IN NETSCAPE NAVIGATOR
+                * 🌟
+            </marquee>
+        </div>
 
-<div class="top-marquee">
-  <marquee scrollamount="8">
-    🌟 WELCOME TO PAULO'S CYBER-CASTLE 🌟 * NOW WITH 100% MORE PHONK * 🚀 LAST UPDATED: 11/22/2003 🚀 * YOU ARE VISITOR #001337 * 💾 PLEASE SIGN MY GUESTBOOK 💾 * BEST VIEWED IN NETSCAPE NAVIGATOR * 🌟
-  </marquee>
-</div>
+        <div class="title-wrap">
+            <h1 class="rainbow">~ PAULO'S HOMEPAGE ~</h1>
+            <div class="subtitle">
+                <span class="spin">*</span>
+                a humble corner of cyberspace
+                <span class="spin">*</span>
+            </div>
+            <div class="subtitle">
+                <span class="blink">► NEW! ◄</span>
+                now featuring <u>CLIMBING PHOTOS</u> &amp;
+                <span class="glow">PHONK BANGERS</span>
+                <span class="blink">►◄</span>
+            </div>
+        </div>
 
-<div class="title-wrap">
-  <h1 class="rainbow">~ PAULO'S HOMEPAGE ~</h1>
-  <div class="subtitle">
-    <span class="spin">*</span>
-    a humble corner of cyberspace
-    <span class="spin">*</span>
-  </div>
-  <div class="subtitle">
-    <span class="blink">► NEW! ◄</span>
-    now featuring <u>CLIMBING PHOTOS</u> &amp;
-    <span class="glow">PHONK BANGERS</span>
-    <span class="blink">►◄</span>
-  </div>
-</div>
+        <table class="layout">
+            <tr>
+                <td class="sidebar">
+                    <h3>* NAVIGATION *</h3>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#work">My Job</a></li>
+                        <li><a href="#music">My Music</a></li>
+                        <li><a href="#climbing">Climbing!!!</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="converter.html">Audio Converter</a></li>
+                        <li><a href="#code">My Code</a></li>
+                        <li>
+                            <a href="#calc"
+                                >calc.exe <span class="blink">NEW!</span></a
+                            >
+                        </li>
+                        <li><a href="#hobbies">Hobbies</a></li>
+                        <li><a href="#links">Cool Links</a></li>
+                        <li><a href="guestbook.html">Guestbook</a></li>
+                    </ul>
 
-<table class="layout">
-<tr>
+                    <h3>♥ VISITORS ♥</h3>
+                    <div class="counter-box">
+                        <div class="counter-digits" id="counter">0001337</div>
+                        <div
+                            style="
+                                color: var(--ansi-bright-green);
+                                font-size: 14px;
+                                margin-top: 6px;
+                            "
+                        >
+                            cool people served
+                        </div>
+                    </div>
 
-  <td class="sidebar">
-    <h3>* NAVIGATION *</h3>
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#work">My Job</a></li>
-      <li><a href="#music">My Music</a></li>
-      <li><a href="#climbing">Climbing!!!</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="converter.html">Audio Converter</a></li>
-      <li><a href="#code">My Code</a></li>
-      <li><a href="#calc">calc.exe <span class="blink">NEW!</span></a></li>
-      <li><a href="#hobbies">Hobbies</a></li>
-      <li><a href="#links">Cool Links</a></li>
-      <li><a href="guestbook.html">Guestbook</a></li>
-    </ul>
+                    <h3>♫ NOW PLAYING ♫</h3>
+                    <div class="music-player">
+                        <button
+                            onclick="
+                                alert(
+                                    '🎵 Imagine MURDER IN MY MIND blasting 🎵',
+                                )
+                            "
+                        >
+                            ▶
+                        </button>
+                        <span class="now-playing"
+                            >Kordhell - Murder In My Mind.mid</span
+                        >
+                    </div>
 
-    <h3>♥ VISITORS ♥</h3>
-    <div class="counter-box">
-      <div class="counter-digits" id="counter">0001337</div>
-      <div style="color:var(--ansi-bright-green);font-size:14px;margin-top:6px;">
-        cool people served
-      </div>
-    </div>
+                    <h3>* BADGES *</h3>
+                    <div class="badges">
+                        <div class="badge ie">BEST IN IE5</div>
+                        <div class="badge ns">NETSCAPE OK</div>
+                        <div class="badge html">HTML 4.0</div>
+                        <div class="badge midi">MIDI POWER</div>
+                        <div class="badge flash">FLASH 5</div>
+                    </div>
 
-    <h3>♫ NOW PLAYING ♫</h3>
-    <div class="music-player">
-      <button onclick="alert('🎵 Imagine MURDER IN MY MIND blasting 🎵')">▶</button>
-      <span class="now-playing">Kordhell - Murder In My Mind.mid</span>
-    </div>
+                    <h3>⌚ LAST UPDATE ⌚</h3>
+                    <div
+                        style="
+                            text-align: center;
+                            font-family: &quot;VT323&quot;, monospace;
+                            font-size: 18px;
+                            color: var(--ansi-bright-cyan);
+                        "
+                    >
+                        Tuesday<br />November 22nd<br />2003 A.D.<br />
+                        <span class="blink">* NEW! *</span>
+                    </div>
+                </td>
 
-    <h3>* BADGES *</h3>
-    <div class="badges">
-      <div class="badge ie">BEST IN IE5</div>
-      <div class="badge ns">NETSCAPE OK</div>
-      <div class="badge html">HTML 4.0</div>
-      <div class="badge midi">MIDI POWER</div>
-      <div class="badge flash">FLASH 5</div>
-    </div>
+                <td class="main">
+                    <div class="construction">
+                        ⚠ THIS PAGE IS UNDER CONSTRUCTION ⚠<br />
+                        <span style="font-size: 9px"
+                            >PLEASE EXCUSE THE MESS</span
+                        >
+                    </div>
 
-    <h3>⌚ LAST UPDATE ⌚</h3>
-    <div style="text-align:center;font-family:'VT323',monospace;font-size:18px;color:var(--ansi-bright-cyan);">
-      Tuesday<br>November 22nd<br>2003 A.D.<br>
-      <span class="blink">* NEW! *</span>
-    </div>
-  </td>
+                    <h2 id="about">WELCOME TO MY HOMEPAGE</h2>
+                    <p>
+                        Hello there cyber-traveler!
+                        <span class="jump">👋</span> My name is
+                        <b
+                            style="
+                                color: var(--ansi-bright-yellow);
+                                font-size: 22px;
+                            "
+                            >PAULO</b
+                        >
+                        and you have stumbled upon my little corner of the World
+                        Wide Web!! I hail from the magical land of
+                        <b class="glow">CURITIBA, BRAZIL</b> 🇧🇷 — the city of
+                        pinheiros and cold rain. Make yourself at home, grab a
+                        virtual cafezinho, and
+                        <span class="blink"
+                            >DON'T FORGET TO SIGN MY GUESTBOOK!!!</span
+                        >
+                    </p>
 
-  <td class="main">
+                    <div class="divider"></div>
 
-    <div class="construction">
-      ⚠ THIS PAGE IS UNDER CONSTRUCTION ⚠<br>
-      <span style="font-size:9px;">PLEASE EXCUSE THE MESS</span>
-    </div>
+                    <h2 id="work">WHAT I DO ALL DAY</h2>
+                    <p>
+                        I am a
+                        <b style="color: var(--ansi-bright-green)"
+                            >SOFTWARE ENGINEER</b
+                        >
+                        at a super cool company called
+                        <b class="glow">BRICK</b> 🧱 where we build AI agent
+                        infrastructure and workflow automation. Imagine telling
+                        somebody in 1998 that one day you'd dispatch
+                        <i>autonomous robots</i> to write your TypeScript for
+                        you. They would call you a wizard.
+                        <span class="spin">🧙</span>
+                    </p>
+                    <p>
+                        My weapons of choice: <b>Helix editor</b> (with custom
+                        keybinds, of course), a beautiful <b>monorepo</b>,
+                        <b>pnpm + Turborepo</b>, <b>Zod schemas everywhere</b>,
+                        and an unhealthy obsession with <b>atomic PRs</b>.
+                    </p>
 
-    <h2 id="about">WELCOME TO MY HOMEPAGE</h2>
-    <p>
-      Hello there cyber-traveler! <span class="jump">👋</span> My name is
-      <b style="color:var(--ansi-bright-yellow);font-size:22px;">PAULO</b> and you have stumbled
-      upon my little corner of the World Wide Web!! I hail from the magical
-      land of <b class="glow">CURITIBA, BRAZIL</b> 🇧🇷 — the city of pinheiros and
-      cold rain. Make yourself at home, grab a virtual cafezinho, and
-      <span class="blink">DON'T FORGET TO SIGN MY GUESTBOOK!!!</span>
-    </p>
+                    <div class="divider"></div>
 
-    <div class="divider"></div>
+                    <h2 id="music">MY MUSIC TASTE</h2>
+                    <p>
+                        I listen to one (1) genre and that genre is
+                        <b class="blink">LOUD</b>. Specifically:
+                        <b
+                            style="
+                                color: var(--ansi-bright-magenta);
+                                font-size: 22px;
+                            "
+                            >PHONK</b
+                        >
+                        &amp;
+                        <b
+                            style="
+                                color: var(--ansi-bright-cyan);
+                                font-size: 22px;
+                            "
+                            >DUBSTEP</b
+                        >. If your ribcage isn't vibrating, the volume is too
+                        low. ⚡⚡⚡
+                    </p>
+                    <p style="text-align: center; font-size: 20px">
+                        ♫ <b>Skrillex</b> ♫ <b>Kordhell</b> ♫
+                        <b>more phonk</b> ♫ <b>even more phonk</b> ♫
+                    </p>
 
-    <h2 id="work">WHAT I DO ALL DAY</h2>
-    <p>
-      I am a <b style="color:var(--ansi-bright-green);">SOFTWARE ENGINEER</b> at a super cool
-      company called <b class="glow">BRICK</b> 🧱 where we build AI agent
-      infrastructure and workflow automation. Imagine telling somebody in
-      1998 that one day you'd dispatch <i>autonomous robots</i> to write your
-      TypeScript for you. They would call you a wizard. <span class="spin">🧙</span>
-    </p>
-    <p>
-      My weapons of choice: <b>Helix editor</b> (with custom keybinds, of course),
-      a beautiful <b>monorepo</b>, <b>pnpm + Turborepo</b>, <b>Zod schemas
-      everywhere</b>, and an unhealthy obsession with <b>atomic PRs</b>.
-    </p>
+                    <div class="divider"></div>
 
-    <div class="divider"></div>
+                    <h2 id="climbing">CLIMBING @ CAVERNA 🧗</h2>
+                    <p>
+                        I traded
+                        <strike style="color: var(--ansi-white)"
+                            >push day / pull day / leg day</strike
+                        >
+                        for hanging from plastic rocks at
+                        <b class="glow">CAVERNA</b> climbing gym. Way more fun.
+                        Sometimes you fall, but the mat catches you. The gym,
+                        much like this website, is dimly lit and full of weird
+                        people having a great time. <span class="jump">🧗‍♂️</span>
+                    </p>
 
-    <h2 id="music">MY MUSIC TASTE</h2>
-    <p>
-      I listen to one (1) genre and that genre is <b class="blink">LOUD</b>.
-      Specifically: <b style="color:var(--ansi-bright-magenta);font-size:22px;">PHONK</b> &amp;
-      <b style="color:var(--ansi-bright-cyan);font-size:22px;">DUBSTEP</b>. If your ribcage
-      isn't vibrating, the volume is too low. ⚡⚡⚡
-    </p>
-    <p style="text-align:center;font-size:20px;">
-      ♫ <b>Skrillex</b> ♫ <b>Kordhell</b> ♫ <b>more phonk</b> ♫ <b>even more phonk</b> ♫
-    </p>
+                    <div class="divider"></div>
 
-    <div class="divider"></div>
+                    <h2 id="code">STUFF I'M BUILDING</h2>
+                    <p>Currently cooking up:</p>
+                    <ul
+                        style="
+                            color: var(--ansi-bright-yellow);
+                            font-size: 17px;
+                            line-height: 1.8;
+                        "
+                    >
+                        <li>
+                            📚 A <b>vector knowledge base</b> for Claude Code
+                            agents — SQLite + sqlite-vec + Voyage embeddings,
+                            all packed into a tidy little Python CLI. Embed your
+                            codebase, search it semantically, blow your own
+                            mind.
+                        </li>
+                        <li>
+                            🤖 An <b>"Issue Creator" agent</b> that does the
+                            boring research work upfront so my overnight Claude
+                            Code sessions don't stall at 3am.
+                        </li>
+                        <li>
+                            🌳 A <b>sync-prs</b> shell script for taming stacked
+                            PRs in a squash-merge world. (If you know, you
+                            know.)
+                        </li>
+                    </ul>
 
-    <h2 id="climbing">CLIMBING @ CAVERNA 🧗</h2>
-    <p>
-      I traded <strike style="color:var(--ansi-white);">push day / pull day / leg day</strike>
-      for hanging from plastic rocks at <b class="glow">CAVERNA</b> climbing
-      gym. Way more fun. Sometimes you fall, but the mat catches you. The
-      gym, much like this website, is dimly lit and full of weird people
-      having a great time. <span class="jump">🧗‍♂️</span>
-    </p>
+                    <div class="divider"></div>
 
-    <div class="divider"></div>
+                    <h2 id="calc">🧮 CALC.EXE &mdash; RUNNING RIGHT HERE 🧮</h2>
+                    <p>
+                        I wrote a
+                        <b class="glow">calculator you drive like vim</b>: every
+                        line is an expression, its answer appears beside it and
+                        you cannot type over it, and everything below a line you
+                        edit recomputes as you type. It is <b>C++20</b> in a
+                        terminal &mdash; <code>dd</code>, <code>d2w</code>,
+                        <code>u</code>, <code>/search</code>, registers, the
+                        lot.
+                        <span class="jump">🧮</span>
+                    </p>
+                    <p>
+                        And it is
+                        <b style="color: var(--ansi-bright-magenta)"
+                            >right there in your browser</b
+                        >, compiled to WebAssembly, no download. Click the
+                        terminal and type <code>i</code> to start inserting,
+                        <code>Esc</code> to stop:
+                    </p>
 
-    <h2 id="code">STUFF I'M BUILDING</h2>
-    <p>
-      Currently cooking up:
-    </p>
-    <ul style="color:var(--ansi-bright-yellow);font-size:17px;line-height:1.8;">
-      <li>📚 A <b>vector knowledge base</b> for Claude Code agents — SQLite
-        + sqlite-vec + Voyage embeddings, all packed into a tidy little Python
-        CLI. Embed your codebase, search it semantically, blow your own mind.</li>
-      <li>🤖 An <b>"Issue Creator" agent</b> that does the boring research
-        work upfront so my overnight Claude Code sessions don't stall at 3am.</li>
-      <li>🌳 A <b>sync-prs</b> shell script for taming stacked PRs in a
-        squash-merge world. (If you know, you know.)</li>
-    </ul>
+                    <div class="calc-window">
+                        <div class="calc-titlebar">
+                            <span class="calc-dots">
+                                <span
+                                    class="calc-dot"
+                                    style="background: var(--ansi-bright-red)"
+                                ></span>
+                                <span
+                                    class="calc-dot"
+                                    style="
+                                        background: var(--ansi-bright-yellow);
+                                    "
+                                ></span>
+                                <span
+                                    class="calc-dot"
+                                    style="background: var(--ansi-bright-green)"
+                                ></span>
+                            </span>
+                            <span class="calc-name">C:\CALC.EXE</span>
+                            <span class="calc-right blink"
+                                >&#9658; CLICK ME &#9668;</span
+                            >
+                        </div>
+                        <iframe
+                            class="calc-frame"
+                            src="https://lisecki.dev/calc/"
+                            title="calc, a vim-modal calculator"
+                            loading="lazy"
+                        ></iframe>
+                    </div>
 
-    <div class="divider"></div>
+                    <p
+                        style="
+                            text-align: center;
+                            font-size: 15px;
+                            color: var(--ansi-white);
+                        "
+                    >
+                        (needs a keyboard, so this one is for desktops &mdash;
+                        <a href="https://lisecki.dev/calc/"
+                            >open it full size</a
+                        >
+                        or
+                        <a href="https://github.com/Thinato/calc"
+                            >read the source</a
+                        >)
+                    </p>
 
-    <h2 id="calc">🧮 CALC.EXE &mdash; RUNNING RIGHT HERE 🧮</h2>
-    <p>
-      I wrote a <b class="glow">calculator you drive like vim</b>: every line is
-      an expression, its answer appears beside it and you cannot type over it,
-      and everything below a line you edit recomputes as you type. It is
-      <b>C++20</b> in a terminal &mdash; <code>dd</code>, <code>d2w</code>,
-      <code>u</code>, <code>/search</code>, registers, the lot.
-      <span class="jump">🧮</span>
-    </p>
-    <p>
-      And it is <b style="color:var(--ansi-bright-magenta);">right there in your
-      browser</b>, compiled to WebAssembly, no download. Click the terminal and
-      type <code>i</code> to start inserting, <code>Esc</code> to stop:
-    </p>
+                    <div class="divider"></div>
 
-    <div class="calc-window">
-      <div class="calc-titlebar">
-        <span class="calc-dots">
-          <span class="calc-dot" style="background:var(--ansi-bright-red)"></span>
-          <span class="calc-dot" style="background:var(--ansi-bright-yellow)"></span>
-          <span class="calc-dot" style="background:var(--ansi-bright-green)"></span>
-        </span>
-        <span class="calc-name">C:\CALC.EXE</span>
-        <span class="calc-right blink">&#9658; CLICK ME &#9668;</span>
-      </div>
-      <iframe class="calc-frame" src="https://lisecki.dev/calc/" title="calc, a vim-modal calculator" loading="lazy"></iframe>
-    </div>
+                    <h2 id="hobbies">OTHER HOBBIES</h2>
+                    <p>When I'm not coding or climbing, you can find me:</p>
+                    <ul
+                        style="
+                            color: var(--ansi-bright-cyan);
+                            font-size: 17px;
+                            line-height: 1.8;
+                        "
+                    >
+                        <li>🍳 <b>Cooking</b> stuff in my kitchen</li>
+                        <li>🧩 Solving <b>Sudoku</b> puzzles</li>
+                        <li>♟️ Losing at <b>chess</b> on the internet</li>
+                        <li>🎮 Pretending to understand my own Helix config</li>
+                    </ul>
 
-    <p style="text-align:center;font-size:15px;color:var(--ansi-white);">
-      (needs a keyboard, so this one is for desktops &mdash;
-      <a href="https://lisecki.dev/calc/">open it full size</a> or
-      <a href="https://github.com/Thinato/calc">read the source</a>)
-    </p>
+                    <div class="divider"></div>
 
-    <div class="divider"></div>
+                    <h2 id="gallery">📸 PHOTO GALLERY 📸</h2>
+                    <p>
+                        Behold my collection of pixels!! Climbing sends, phonk
+                        nights, cafezinhos, and other assorted cyber-memories.
+                        Step into the gallery and flip through 'em like it's a
+                        slideshow on a CRT monitor.
+                        <span class="jump">📷</span>
+                    </p>
+                    <div style="text-align: center; margin: 16px 0">
+                        <a class="guestbook-btn" href="gallery.html"
+                            >🖼️ ENTER THE GALLERY »</a
+                        >
+                    </div>
 
-    <h2 id="hobbies">OTHER HOBBIES</h2>
-    <p>
-      When I'm not coding or climbing, you can find me:
-    </p>
-    <ul style="color:var(--ansi-bright-cyan);font-size:17px;line-height:1.8;">
-      <li>🍳 <b>Cooking</b> stuff in my kitchen</li>
-      <li>🧩 Solving <b>Sudoku</b> puzzles</li>
-      <li>♟️ Losing at <b>chess</b> on the internet</li>
-      <li>🎮 Pretending to understand my own Helix config</li>
-    </ul>
+                    <div class="divider"></div>
 
-    <div class="divider"></div>
+                    <h2 id="converter">🎵 REALLY BAD AUDIO CONVERTER 🎵</h2>
+                    <p>
+                        Behold my greatest invention: a converter that turns
+                        <b>ANY</b> file — PDF, EXE, JPG, XML, anything — into a
+                        beautiful MP3. It uses
+                        <b class="glow">QuantumAudio™ AI</b> to reveal the music
+                        hiding inside your files. Does it work perfectly every
+                        single time? <span class="blink">YES.</span>
+                        <span class="jump">🔮</span>
+                    </p>
+                    <div style="text-align: center; margin: 16px 0">
+                        <a class="guestbook-btn" href="converter.html"
+                            >🎧 CONVERT A FILE »</a
+                        >
+                    </div>
 
-    <h2 id="gallery">📸 PHOTO GALLERY 📸</h2>
-    <p>
-      Behold my collection of pixels!! Climbing sends, phonk nights,
-      cafezinhos, and other assorted cyber-memories. Step into the gallery
-      and flip through 'em like it's a slideshow on a CRT monitor.
-      <span class="jump">📷</span>
-    </p>
-    <div style="text-align:center;margin:16px 0;">
-      <a class="guestbook-btn" href="gallery.html">🖼️ ENTER THE GALLERY »</a>
-    </div>
+                    <div class="construction">
+                        🚧 MORE CONTENT COMING SOON!!! 🚧
+                    </div>
 
-    <div class="divider"></div>
+                    <h2 id="links">⚡ COOL LINKS ⚡</h2>
+                    <p>
+                        <a href="https://github.com/thinato">* My GitHub *</a>
+                        &nbsp;|&nbsp;
+                        <a href="#">* Curitiba City Tour *</a> &nbsp;|&nbsp;
+                        <a href="#">* Free MIDIs *</a>
+                    </p>
 
-    <h2 id="converter">🎵 REALLY BAD AUDIO CONVERTER 🎵</h2>
-    <p>
-      Behold my greatest invention: a converter that turns <b>ANY</b> file —
-      PDF, EXE, JPG, XML, anything — into a beautiful MP3. It uses
-      <b class="glow">QuantumAudio™ AI</b> to reveal the music hiding inside
-      your files. Does it work perfectly every single time?
-      <span class="blink">YES.</span> <span class="jump">🔮</span>
-    </p>
-    <div style="text-align:center;margin:16px 0;">
-      <a class="guestbook-btn" href="converter.html">🎧 CONVERT A FILE »</a>
-    </div>
+                    <div class="divider"></div>
 
-    <div class="construction">
-      🚧 MORE CONTENT COMING SOON!!! 🚧
-    </div>
+                    <h2 id="guestbook">✍️ MY GUESTBOOK ✍️</h2>
+                    <p>
+                        Over <b class="glow">1,300</b> cyber-travelers have
+                        already signed my guestbook since 1999. Don't be shy —
+                        leave your mark and join the wall of legends!!
+                        <span class="jump">✍️</span>
+                    </p>
+                    <div style="text-align: center; margin: 16px 0">
+                        <span class="pulse-text">
+                            <a class="guestbook-btn" href="guestbook.html"
+                                >✍️ SIGN MY GUESTBOOK!!! ✍️</a
+                            >
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
 
-    <h2 id="links">⚡ COOL LINKS ⚡</h2>
-    <p>
-      <a href="https://github.com/thinato">* My GitHub *</a> &nbsp;|&nbsp;
-      <a href="#">* Curitiba City Tour *</a> &nbsp;|&nbsp;
-      <a href="#">* Free MIDIs *</a>
-    </p>
+        <div class="webring">
+            <div class="ring-title">* THE BRAZILIAN DEV WEBRING *</div>
+            <a href="#">« PREV</a> :: <a href="#">RANDOM</a> ::
+            <a href="#">LIST</a> :: <a href="#">JOIN</a> ::
+            <a href="#">NEXT »</a>
+            <div
+                style="
+                    font-size: 14px;
+                    color: var(--ansi-white);
+                    margin-top: 6px;
+                "
+            >
+                a webring of cool brazilian websites since 1999
+            </div>
+        </div>
 
-    <div class="divider"></div>
+        <div class="footer">
+            <p>
+                © 2003 PAULO * ALL RIGHTS RESERVED * MADE WITH NOTEPAD.EXE<br />
+                <span class="blink">♥ THANKS FOR VISITING ♥</span><br />
+                <span style="font-size: 14px; color: var(--ansi-white)">
+                    this page works best at 800x600 resolution &nbsp;|&nbsp;
+                    turn off pop-up blocker for full experience
+                </span>
+            </p>
+            <p style="font-size: 14px">
+                Hosted on
+                <a href="github.com/thinato/thinato.github.io">Magalu Cloud</a>
+                * <a href="piokinovaes@gmail.com">Email me!</a>
+            </p>
+            <p style="font-size: 18px; margin-top: 14px">
+                <a href="#" class="theme-toggle">💡 switch to light mode</a>
+            </p>
+        </div>
 
-    <h2 id="guestbook">✍️ MY GUESTBOOK ✍️</h2>
-    <p>
-      Over <b class="glow">1,300</b> cyber-travelers have already signed my
-      guestbook since 1999. Don't be shy — leave your mark and join the
-      wall of legends!! <span class="jump">✍️</span>
-    </p>
-    <div style="text-align:center;margin:16px 0;">
-      <span class="pulse-text">
-        <a class="guestbook-btn" href="guestbook.html">✍️ SIGN MY GUESTBOOK!!! ✍️</a>
-      </span>
-    </div>
-
-  </td>
-</tr>
-</table>
-
-<div class="webring">
-  <div class="ring-title">* THE BRAZILIAN DEV WEBRING *</div>
-  <a href="#">« PREV</a> ::
-  <a href="#">RANDOM</a> ::
-  <a href="#">LIST</a> ::
-  <a href="#">JOIN</a> ::
-  <a href="#">NEXT »</a>
-  <div style="font-size:14px;color:var(--ansi-white);margin-top:6px;">
-    a webring of cool brazilian websites since 1999
-  </div>
-</div>
-
-<div class="footer">
-  <p>
-    © 2003 PAULO * ALL RIGHTS RESERVED * MADE WITH NOTEPAD.EXE<br>
-    <span class="blink">♥ THANKS FOR VISITING ♥</span><br>
-    <span style="font-size:14px;color:var(--ansi-white);">
-      this page works best at 800x600 resolution &nbsp;|&nbsp; turn off pop-up blocker for full experience
-    </span>
-  </p>
-  <p style="font-size:14px;">
-    Hosted on <a href="github.com/thinato/thinato.github.io">Magalu Cloud</a> * <a href="piokinovaes@gmail.com">Email me!</a>
-  </p>
-  <p style="font-size:18px;margin-top:14px;">
-    <a href="#" class="theme-toggle">💡 switch to light mode</a>
-  </p>
-</div>
-
-<script src="script.js" defer></script>
-<script src="theme.js" defer></script>
-
-</body>
+        <script src="script.js" defer></script>
+        <script src="theme.js" defer></script>
+    </body>
 </html>

@@ -1,8 +1,3 @@
-   THE REALLY BAD AUDIO CONVERTER (tm)
-   Converts literally any file into the exact same kalimba song,
-   keeping the original filename (but as .mp3). Peak technology.
-   ============================================================ */
-
 const THE_SONG = 'audio/Mr_Scruff_Kalimba_32kbps.mp3';
 
 const CONVERT_MSGS = [

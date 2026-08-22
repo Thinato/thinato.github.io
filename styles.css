@@ -1,11 +1,6 @@
-   PAULO'S WEBSITE  ::  EST. 1998  ::  BEST VIEWED IN IE 5
-   ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Press+Start+2P&family=VT323&display=swap');
 
-   ANSI-16 COLOR PALETTE  ::  the ENTIRE site uses only these
-   (classic terminal 16-color set — no other colors allowed)
-   ============================================================ */
 :root {
   --ansi-black:   #000000;
   --ansi-red:     #aa0000;
@@ -398,8 +393,6 @@ td.main {
     0 0 30px var(--ansi-bright-magenta);
 }
 
-   GUESTBOOK
-   ============================================================ */
 .back-home {
   display: block;
   text-align: center;
@@ -508,15 +501,10 @@ td.main {
   word-break: break-word;
 }
 
-   LIGHT MODE  ::  literally just invert the whole thing :)
-   The filter goes on <html> (not <body>) — the body background
-   is propagated to the root canvas, so a filter on <body> alone
-   would leave the page background un-inverted.
-   ============================================================ */
 html.light-mode {
   filter: invert(1) hue-rotate(180deg);
 }
-   overlay stays pure white (double-invert cancels out) */
+
 html.light-mode img,
 html.light-mode video,
 html.light-mode #flash-overlay {
@@ -543,9 +531,6 @@ html.light-mode #flash-overlay {
   background: var(--ansi-bright-yellow);
 }
 
-   CALC.EXE  ::  the WebAssembly build, embedded from
-   lisecki.dev/calc/ (same origin, its own repo)
-   ============================================================ */
 .calc-window {
   max-width: 100%;
   margin: 14px 0;

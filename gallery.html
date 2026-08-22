@@ -1,66 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>~*~ Paulo's Gallery ~*~ </title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="gallery.css">
-<script>if(localStorage.getItem('lisecki-theme')==='light')document.documentElement.classList.add('light-mode');</script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>~*~ Paulo's Gallery ~*~</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="gallery.css" />
+        <script>
+            if (localStorage.getItem("lisecki-theme") === "light")
+                document.documentElement.classList.add("light-mode");
+        </script>
+    </head>
+    <body>
+        <div class="top-marquee">
+            <marquee scrollamount="8">
+                📸 PAULO'S PHOTO GALLERY 📸 * CLICK A PIC TO ENLARGE * 🖼️ USE ←
+                → TO FLIP THROUGH * 100% HAND-CRANKED PIXELS 🖼️ *
+            </marquee>
+        </div>
 
-<div class="top-marquee">
-  <marquee scrollamount="8">
-    📸 PAULO'S PHOTO GALLERY 📸 * CLICK A PIC TO ENLARGE * 🖼️ USE ← → TO FLIP THROUGH * 100% HAND-CRANKED PIXELS 🖼️ *
-  </marquee>
-</div>
+        <div class="title-wrap">
+            <h1 class="rainbow">~ GALLERY ~</h1>
+            <div class="subtitle">
+                <span class="spin">*</span>
+                a wall of cyber-memories
+                <span class="spin">*</span>
+            </div>
+        </div>
 
-<div class="title-wrap">
-  <h1 class="rainbow">~ GALLERY ~</h1>
-  <div class="subtitle">
-    <span class="spin">*</span>
-    a wall of cyber-memories
-    <span class="spin">*</span>
-  </div>
-</div>
+        <div class="back-home">
+            <a href="index.html">« BACK TO HOMEPAGE</a>
+        </div>
 
-<div class="back-home">
-  <a href="index.html">« BACK TO HOMEPAGE</a>
-</div>
+        <div class="gallery-wrap">
+            <h2>* MY PICTURES *</h2>
+            <div id="gallery-grid" class="gallery-grid"></div>
+        </div>
 
-<div class="gallery-wrap">
-  <h2>* MY PICTURES *</h2>
-  <div id="gallery-grid" class="gallery-grid"></div>
-</div>
+        <div
+            id="lightbox"
+            class="lightbox"
+            aria-modal="true"
+            role="dialog"
+            aria-label="Picture viewer"
+        >
+            <div class="lightbox-stage">
+                <button
+                    id="lb-close"
+                    class="lb-btn lb-close"
+                    aria-label="Close"
+                >
+                    ✕
+                </button>
+                <button
+                    id="lb-prev"
+                    class="lb-btn lb-prev"
+                    aria-label="Previous picture"
+                >
+                    ◄
+                </button>
+                <img id="lb-img" class="lightbox-img" src="" alt="" />
+                <button
+                    id="lb-next"
+                    class="lb-btn lb-next"
+                    aria-label="Next picture"
+                >
+                    ►
+                </button>
+            </div>
+            <div id="lb-caption" class="lightbox-caption"></div>
+            <div id="lb-counter" class="lightbox-counter"></div>
+        </div>
 
-<div id="lightbox" class="lightbox" aria-modal="true" role="dialog" aria-label="Picture viewer">
-  <div class="lightbox-stage">
-    <button id="lb-close" class="lb-btn lb-close" aria-label="Close">✕</button>
-    <button id="lb-prev" class="lb-btn lb-prev" aria-label="Previous picture">◄</button>
-    <img id="lb-img" class="lightbox-img" src="" alt="">
-    <button id="lb-next" class="lb-btn lb-next" aria-label="Next picture">►</button>
-  </div>
-  <div id="lb-caption" class="lightbox-caption"></div>
-  <div id="lb-counter" class="lightbox-counter"></div>
-</div>
+        <div class="footer">
+            <p>
+                © 2003 PAULO * ALL RIGHTS RESERVED * MADE WITH NOTEPAD.EXE<br />
+                <span class="blink">♥ THANKS FOR VISITING ♥</span>
+            </p>
+            <p style="font-size: 14px">
+                <a href="index.html">« back to the homepage</a>
+            </p>
+            <p style="font-size: 18px; margin-top: 14px">
+                <a href="#" class="theme-toggle">💡 switch to light mode</a>
+            </p>
+        </div>
 
-<div class="footer">
-  <p>
-    © 2003 PAULO * ALL RIGHTS RESERVED * MADE WITH NOTEPAD.EXE<br>
-    <span class="blink">♥ THANKS FOR VISITING ♥</span>
-  </p>
-  <p style="font-size:14px;">
-    <a href="index.html">« back to the homepage</a>
-  </p>
-  <p style="font-size:18px;margin-top:14px;">
-    <a href="#" class="theme-toggle">💡 switch to light mode</a>
-  </p>
-</div>
-
-<script src="script.js" defer></script>
-<script src="gallery.js" defer></script>
-<script src="theme.js" defer></script>
-
-</body>
+        <script src="script.js" defer></script>
+        <script src="gallery.js" defer></script>
+        <script src="theme.js" defer></script>
+    </body>
 </html>
