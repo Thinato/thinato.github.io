@@ -353,29 +353,6 @@ td.main {
   100% { opacity: 0; transform: translate(0,30px) scale(0.3) rotate(180deg); }
 }
 
-.music-player {
-  background: linear-gradient(180deg, var(--ansi-white), var(--ansi-bright-black));
-  border: 3px outset var(--ansi-bright-white);
-  padding: 8px 14px;
-  margin: 14px 0;
-  color: var(--ansi-black);
-  font-family: 'VT323', monospace;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.music-player button {
-  background: var(--ansi-white);
-  border: 2px outset var(--ansi-bright-white);
-  padding: 4px 10px;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 9px;
-  cursor: pointer;
-}
-.music-player button:active { border-style: inset; }
-.now-playing { animation: scroll-text 8s linear infinite; }
-
 .pulse-text {
   animation: pulseSize 0.6s ease-in-out infinite alternate;
   display: inline-block;

@@ -45,3 +45,14 @@ setInterval(() => {
     document.title = "~*~ " + statuses[i] + " ~*~";
     i = (i + 1) % statuses.length;
 }, 2500);
+
+const nepalClock = document.getElementById("nepal-clock");
+if (nepalClock) {
+    const tick = () => {
+        nepalClock.textContent = new Date().toLocaleTimeString("en-GB", {
+            timeZone: "Asia/Kathmandu",
+        });
+    };
+    tick();
+    setInterval(tick, 1000);
+}
