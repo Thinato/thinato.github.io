@@ -36,7 +36,6 @@ document.addEventListener("mousemove", (e) => {
 const statuses = [
     "Loading...",
     "Welcome to my homepage!",
-    "Sign my guestbook!",
     "Best viewed in 800x600",
     "Powered by Notepad.exe ✨",
 ];
