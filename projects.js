@@ -16,6 +16,14 @@ function shot(label) {
 // links: as many as you want — { label: "Try it", url: "..." }
 const PROJECTS = [
     {
+        image: shot("MONDO"),
+        title: "Mondo",
+        tags: ["JavaScript", "TypeScript", "Firebase"],
+        description:
+            "A daily country-guessing game: seven challenges a day — a silhouette, a flag, a capital, a GDP, two boards of eight and a famous birthplace — plus groups, leaderboards and tournaments. In Portuguese.",
+        links: [{ label: "Play", url: "/mondo/" }],
+    },
+    {
         image: shot("PROJECT 01"),
         title: "Audio Converter",
         tags: ["JavaScript", "WebAudio", "No Deps"],
